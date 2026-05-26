@@ -1,0 +1,84 @@
+.profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.college-info-1 {
+    flex: 1 1 60%;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.college-info-1 h2 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.college-info-1 p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+.accreditation {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.accreditation img {
+    width: 180px;
+    margin-right: 10px;
+}
+
+.profile-cards {
+    display: flex;
+    flex: 1 1 35%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 48%;
+}
+
+.profile-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile-card h3 {
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.profile-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.profile-card button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #003366;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-card button:hover {
+    background-color: #a00e1a;
+}

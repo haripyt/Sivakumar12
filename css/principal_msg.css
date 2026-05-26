@@ -1,0 +1,105 @@
+/* Modal Styling */
+
+.principal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed position */
+    z-index: 1000;
+    /* Ensure it's on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Add scroll for long content */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 20px;
+    /* Add spacing around the modal */
+    box-sizing: border-box;
+}
+
+/* Modal Content Styling */
+
+.principal-content {
+    background-color: #ffffff;
+    /* White background */
+    margin: auto;
+    /* Centered horizontally */
+    padding: 30px;
+    border-radius: 15px;
+    /* Rounded corners */
+    width: 90%;
+    /* Responsive width */
+    max-width: 800px;
+    /* Set a maximum width */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    /* Subtle shadow for depth */
+    text-align: left;
+    /* Left-align text */
+    font-family: 'Arial', sans-serif;
+    /* Professional font */
+}
+
+/* Modal Close Button */
+
+.close {
+    color: #333;
+    /* Dark gray for visibility */
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-right: -10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff0000;
+    /* Red on hover */
+    text-decoration: none;
+}
+
+/* Modal Heading */
+
+.principal-content h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #003366;
+    /* Navy blue for consistency with professional design */
+    text-align: center;
+    /* Centered heading */
+}
+
+/* Paragraph Text */
+
+.principal-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    /* Neutral gray for body text */
+    text-align: justify;
+    /* Justified for a clean look */
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+
+button {
+    background-color: #003366;
+    /* Navy blue for consistency */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00509e;
+    /* Slightly lighter blue on hover */
+}

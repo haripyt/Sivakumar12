@@ -1,0 +1,51 @@
+.counter-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    /* margin-bottom: 30px; */
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Individual counter styling */
+
+.counter {
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.counter:hover {
+    color: white;
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+/* Counter value styling */
+
+.counter-value {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Counter title styling */
+
+.counter-title {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #fff;
+}
+
+@media (max-width:768px) {
+    .counter-title {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 10px 0;
+        color: #fff;
+    }
+    .counter-value {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,156 @@
+/* .header-s-o-e {
+    height: 50px;
+    width: 400px;
+    background-color: #003366;
+    padding: 20px;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+ .container-s-e-o {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+    .container-s-e-o {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-s-e-o {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.school-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.school-box:hover {
+    transform: scale(1.02);
+}
+
+.school-box img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.school-content {
+    margin-left: 20px;
+}
+
+.school-name {
+    background-color: #a30000;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.school-details {
+    margin-top: 10px;
+}
+
+.school-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+} */
+
+.container {
+    max-width: 1900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+.card h2 {
+    color: white;
+    background-color: #003366;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    height: 30px;
+    justify-self: center;
+    padding: 5px;
+}
+
+.card p {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

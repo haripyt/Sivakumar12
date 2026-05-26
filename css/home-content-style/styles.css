@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+}
+
+body {
+    background: none;
+    zoom: 100%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    body {
+        zoom: 80%;
+    }
+}
+
+/* Top Bar */
+
+.top-bar {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.top-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 0px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.admission-btn {
+    background-color: #a30000;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.admission-btn:hover {
+    background-color: lightcoral;
+}
+
+/* Logo and College Information Section */
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ddd;
+    justify-content: center;
+}
+
+.logo {
+    width: 150px;
+    height: 75px;
+    margin-right: 20px;
+}
+
+.logo-2 {
+    width: 150px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.college-info #college-name {
+    font-size: 40px !important;
+    margin: 0 !important;
+    color: black !important;
+    font-weight: 400 !important;
+}
+
+.college-info p {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #555;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    background-color: #003366;
+    padding: 10px 30px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    /* margin-right: 15px; */
+    position: relative;
+    /* Required for dropdown positioning */
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 5px;
+    display: block;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Dropdown menu */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #eaeaea;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+    min-width: 200px;
+    opacity: 1;
+    z-index: 999;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.dropdown-content li {
+    display: none;
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a {
+    /* padding: 10px 15px; */
+    text-align: left;
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #a30000;
+    color: #fff;
+    font-weight: 600;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown:hover .dropdown-content li {
+    display: block;
+}
+
+.dropdown-content li:hover {
+    background-color: #a30000;
+    /* Change to your desired hover color */
+    color: white;
+    transform: translateX(15px);
+    /* Adds a subtle shift on hover */
+}
+
+/* Optional: Change hover background color for dropdown container */
+
+/* .navbar .dropdown:hover > a {
+    background-color: #a30000; 
+    color: white;
+} */
+
+/* Home Link */
+
+.home-link {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Initial Navbar Style */
+
+.navbar {
+    background-color: #003366;
+    padding: 10px 30px;
+    width: 96.4%;
+    z-index: 998;
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
+
+/* Style when navbar is fixed */
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust padding when navbar is fixed */
+
+body.fixed-nav-padding {
+    padding-top: 60px;
+    /* Adjust according to your navbar height */
+}
+
+/* Hide menu by default on mobile and show only when active */
+
+/* Hamburger icon for mobile */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+    }
+    .navbar ul.active {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul.active {
+        display: flex;
+    }
+    .college-info h1 {
+        font-size: 20px;
+        margin: 0;
+        color: black;
+    }
+    .college-info p {
+        font-size: 10px;
+        margin: 5px 0 0;
+        color: #555;
+    }
+    .logo {
+        width: 120px;
+        height: 60px;
+        margin-right: 20px;
+    }
+}
+
+/* Responsive changes for mobile */
+
+@media (max-width: 768px) {
+    /* Stack the elements in the top bar vertically */
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .top-bar .contact-info,
+    .top-bar .linkis {
+        margin-bottom: 10px;
+        /* Add some space between sections */
+    }
+    .top-bar .contact-info a,
+    .top-bar .linkis a {
+        display: block;
+        text-align: center;
+        /* Space between each link */
+    }
+    .top-bar .admission-btn {
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+
+.active-class:active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.logo-section-1 {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs */
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #333;
+}
+
+.tab-link {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    /* border: none; */
+    /* background: none; */
+    background-color: #a30000;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px 25px 0px 0px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.tab-link:hover {
+    color: white;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.tab-link.active {
+    /* color: #333; */
+    color: white;
+    /* background-color:#a30000; */
+    background-color: #003366;
+    border-bottom: 2px solid #eaeaea;
+}
+
+/* Scrolling Container */
+
+.scroll-container {
+    height: 240px;
+    /* Show only one item */
+    overflow: auto;
+    position: relative;
+    background: #f9fafb;
+    padding: 10px;
+    /* border-radius: 8px;
+    margin-top: 5px; */
+}
+
+/* Custom scrollbar */
+
+.scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+/* Stop scrolling on hover */
+
+.scroll-container:hover {
+    overflow-y: auto;
+    /* Allows scrolling manually */
+}
+
+/* Scrolling Content */
+
+.scroll-content-announce {
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    animation: scrollUp 20s linear infinite;
+    gap: 10px;
+    white-space: normal;
+    /* Ensure text wraps */
+}
+
+.scroll-content-event {
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    animation: scrollUp 150s linear infinite;
+    gap: 10px;
+    white-space: normal;
+    /* Ensure text wraps */
+}
+
+/* Keyframes for continuous scroll */
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-12%);
+    }
+}
+
+.announcement,
+.event {
+    font-size: 20px;
+    /* font-weight: bold; */
+    padding: 5px 50px 20px 0px;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px dotted #002a80;
+}
+
+/* Stop scrolling on hover */
+
+.scroll-container:hover .scroll-content-announce,
+.scroll-container:hover .scroll-content-event {
+    animation-play-state: paused;
+}
+
+.placement-header {
+    text-align: center;
+    font-size: 40px;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+}
+
+.view-all-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-all-btn {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.view-all-btn:hover {
+    background-color: #00509e;
+}
+
+.index-label {
+    display: inline-block;
+    background-color: #b91c1c;
+    transform: skewX(-15deg);
+    padding: 8px 20px;
+}
+
+.index-label-text {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 600;
+    transform: skewX(15deg);
+    font-family: sans-serif;
+    font-size: x-large;
+}
+
+Awards Section Style .institutional-awards-section {
+    padding: 40px 20px;
+    /* background-color: #f9f9f9; */
+    border-top: 2px solid #ddd;
+}
+
+.institutional-awards-section .index-label-text {
+    font-size: xx-large;
+    /* color: #003366; */
+    color: #ddd;
+}
+
+.institutional-awards-section .view-all-btn {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.institutional-awards-section .view-all-btn:hover {
+    background-color: #0055aa;
+}
+
+/* End Award */
+
+.carousel-section {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* .award-carousel {
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    overflow: hidden;
+} */
+
+/* .award-track {
+    display: flex;
+    will-change: transform;
+} */
+
+/* .award-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.award-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.award-slide h3 {
+    margin: 10px 0;
+    color: #003366;
+}
+
+.award-slide p {
+    font-size: 14px;
+    color: #444;
+}
+
+.award-slide span {
+    font-size: 13px;
+    color: #777;
+} */
+
+/* Award New */
+
+.award-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.award-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: award-marquee 25s linear infinite;
+}
+
+.award-slide {
+    flex: 0 0 auto;
+    width: 400px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.award-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Infinite smooth scrolling */
+
+@keyframes award-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+
+.award-carousel:hover .award-track {
+    animation-play-state: paused;
+}

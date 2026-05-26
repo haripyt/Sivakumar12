@@ -1,0 +1,119 @@
+.container-5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Left Section */
+
+.left-section {
+    position: relative;
+    flex: 2;
+    /* background: url('./img/fornt-pic.jpeg') no-repeat center center/cover; */
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background: linear-gradient( rgba(20, 20, 20, .7), rgba(20, 20, 20, .7)), url('./img/fornt-pic.jpeg')no-repeat center center/cover;
+    ;
+}
+
+video {
+    width: 530px;
+    /* height: 300px; */
+    border-radius: 10px;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Right Section */
+
+.right-section {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.tabs span {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.announcements p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.announcements b {
+    color: #002D62;
+}
+
+.right-section {
+    width: 800px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 300px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* .tab-link {
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background: none;
+    padding: 10px;
+} */
+
+.active {
+    color: #a30000;
+    border-bottom: 2px solid #333;
+}
+
+/* .scroll-container {
+    max-height: 300px;
+    overflow-y: auto;
+} */
+
+.hidden {
+    display: none;
+}
+
+/* #events.hidden {
+    display: none;
+}
+
+#events {
+    display: block;
+} */
